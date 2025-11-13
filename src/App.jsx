@@ -257,8 +257,12 @@ export default function App() {
           <div className="md:flex md:items-center">
             {/* Image/Avatar Placeholder */}
             <div className="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
-              <div className="w-32 h-32 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 text-4xl font-bold border-4 border-indigo-200">
-                AJ
+              <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-indigo-200 shadow-md">
+                <img
+                  src="./assets/TOBI.jpg" 
+                  alt="AO"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             
