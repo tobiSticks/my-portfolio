@@ -212,7 +212,7 @@ export default function App() {
               // target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 transition duration-150 ml-4"
-              download="my_cv.pdf"
+              download="Tobi cv revamped.pdf"
             >
               Download CV <Download className="w-4 h-4 ml-2" />
             </a>
