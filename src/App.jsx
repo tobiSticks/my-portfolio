@@ -23,22 +23,22 @@ const portfolioData = {
   name: "Adeniji Oluwatobi Adebayo",
   title: "Aspiring AI Expert | Data Analysis & Software Developer",
   bio: "A recent Computer Science graduate from Landmark University (Class of 2025) with a dual specialization in Data Analysis and Software Development. Driven by a passion for leveraging machine learning and AI to build predictive systems and solve complex, real-world problems. Proficient in React and experienced in full-stack development and data management.",
-  
+
   contact: {
     email: "padenijiinfinity@gmail.com",
     linkedin: "https://www.linkedin.com/in/oluwatobiadebayo-2b5514397",
     github: "https://github.com/tobiSticks",
     cvUrl: "./public/assets/Tobi cv revamped.pdf", // Placeholder for actual CV PDF link
   },
-  
+
   skills: {
     languages: ["JavaScript (React)", "Python", "SQL", "Excel (Advanced)"],
-    frameworks: ["React.js", "Tailwind CSS (Learning)", "TypeScript (Learning)"],
+    frameworks: ["React.js", "Tailwind CSS", "TypeScript "],
     databases: ["MySQL"],
     tools: ["Git", "GitHub", "Jupyter Notebooks"],
     concepts: ["Data Structures & Algorithms", "Data Analysis", "Predictive Modeling", "OOP"],
   },
-  
+
   projects: [
     {
       id: 1,
@@ -68,8 +68,16 @@ const portfolioData = {
       status: "In Progress",
     },
   ],
-  
+
   experience: [
+    {
+      type: "Work",
+      role: "Front-End Engineer",
+      organization: "Nexapay",
+      date: "Present",
+      description: "Developing responsive user interfaces using React.js and building reusable UI components aligned with product requirements. Responsible for integrating APIs, translating Figma designs into code, and optimizing application performance while collaborating with the team to deliver features on schedule.",
+      icon: Briefcase,
+    },
     {
       type: "Internship",
       role: "IT/Data Intern",
@@ -114,7 +122,7 @@ const ProjectCard = ({ project }) => {
       </div>
       <p className="text-sm text-indigo-600 font-medium mb-4">{project.status}</p>
       <p className="text-gray-600 text-sm mb-4 min-h-[72px]">{project.description}</p>
-      
+
       <div className="mt-4">
         <p className="text-sm font-medium text-gray-700 mb-2">Tech Stack:</p>
         <div className="flex flex-wrap">
@@ -123,15 +131,15 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
       </div>
-      
+
       {project.link !== "CLASSIFIED/PRIVATE REPO" && (
-        <a 
-          href={project.link} 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
           className="mt-4 inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-800 transition duration-150"
         >
-          View Code/Details 
+          View Code/Details
           <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
         </a>
       )}
@@ -166,7 +174,7 @@ const ExperienceItem = ({ item }) => {
 // --- Main App Component ---
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   const navLinks = [
     { href: "#about", label: "About" },
     { href: "#skills", label: "Skills" },
@@ -180,7 +188,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans">
-      
+
       {/* 1. Header & Navigation */}
       <header className="sticky top-0 z-50 bg-white shadow-md">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -191,9 +199,9 @@ export default function App() {
           {/* Desktop Navigation */}
           <div className="hidden sm:flex space-x-6 text-gray-600 font-medium items-center">
             {navLinks.map(link => (
-              <a 
+              <a
                 key={link.href}
-                href={link.href} 
+                href={link.href}
                 className="hover:text-indigo-600 transition duration-150"
               >
                 {link.label}
@@ -212,7 +220,7 @@ export default function App() {
 
           {/* Mobile Menu Button */}
           <div className="sm:hidden flex items-center">
-            <button 
+            <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 text-indigo-600 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
               aria-label="Toggle Menu"
@@ -249,9 +257,9 @@ export default function App() {
           </div>
         )}
       </header>
-      
+
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        
+
         {/* 2. Hero/About Section */}
         <section id="about" className="pt-16 pb-20 bg-white rounded-2xl shadow-xl p-8 sm:p-12 mb-16">
           <div className="md:flex md:items-center">
@@ -259,43 +267,43 @@ export default function App() {
             <div className="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
               <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-indigo-200 shadow-md">
                 <img
-                  src="./assets/TOBI.jpg" 
+                  src="./assets/TOBI.jpg"
                   alt="AO"
                   className="w-full h-full object-cover"
                 />
               </div>
             </div>
-            
+
             {/* Text Content */}
             <div>
               <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-2">{portfolioData.name}</h1>
               <p className="text-xl sm:text-2xl text-indigo-600 font-light mb-4">{portfolioData.title}</p>
               <p className="text-gray-600 leading-relaxed max-w-3xl mb-6">{portfolioData.bio}</p>
-              
+
               {/* Contact Links */}
               <div className="flex flex-wrap gap-4 mt-4">
-                <a 
-                  href={`mailto:${portfolioData.contact.email}`} 
+                <a
+                  href={`mailto:${portfolioData.contact.email}`}
                   className="flex items-center text-indigo-600 hover:text-indigo-800 transition duration-150"
                   aria-label="Email"
                 >
                   <Mail className="w-5 h-5 mr-1" />
                   Email
                 </a>
-                <a 
-                  href={portfolioData.contact.linkedin} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href={portfolioData.contact.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center text-indigo-600 hover:text-indigo-800 transition duration-150"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5 mr-1" />
                   LinkedIn
                 </a>
-                <a 
-                  href={portfolioData.contact.github} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href={portfolioData.contact.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center text-indigo-600 hover:text-indigo-800 transition duration-150"
                   aria-label="GitHub"
                 >
@@ -310,7 +318,7 @@ export default function App() {
         {/* 3. Skills Section */}
         <section id="skills" className="py-12">
           <SectionTitle icon={Code}>Technical Skills</SectionTitle>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Languages */}
             <div className="p-6 bg-white rounded-xl shadow-md border-t-4 border-indigo-500">
@@ -319,7 +327,7 @@ export default function App() {
                 {portfolioData.skills.languages.map(skill => <Pill key={skill}>{skill}</Pill>)}
               </div>
             </div>
-            
+
             {/* Frameworks & Databases */}
             <div className="p-6 bg-white rounded-xl shadow-md border-t-4 border-indigo-500">
               <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center"><Database className="w-5 h-5 mr-2 text-indigo-600" /> Frameworks & DBs</h3>
@@ -328,7 +336,7 @@ export default function App() {
                 {portfolioData.skills.databases.map(skill => <Pill key={skill}>{skill}</Pill>)}
               </div>
             </div>
-            
+
             {/* Tools & Concepts */}
             <div className="p-6 bg-white rounded-xl shadow-md border-t-4 border-indigo-500">
               <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center"><BookOpen className="w-5 h-5 mr-2 text-indigo-600" /> Tools & Concepts</h3>
@@ -339,7 +347,7 @@ export default function App() {
             </div>
           </div>
         </section>
-        
+
         {/* 4. Projects Section */}
         <section id="projects" className="py-12">
           <SectionTitle icon={Layers}>Featured Projects</SectionTitle>
@@ -349,7 +357,7 @@ export default function App() {
             ))}
           </div>
         </section>
-        
+
         {/* 5. Experience Section */}
         <section id="experience" className="py-12">
           <SectionTitle icon={Award}>Experience & Education</SectionTitle>
@@ -363,9 +371,9 @@ export default function App() {
             ))}
           </div>
         </section>
-        
+
       </main>
-      
+
       {/* Footer */}
       <footer className="bg-gray-800 text-white mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm">
@@ -373,7 +381,7 @@ export default function App() {
           <p className="mt-1">Designed for showcasing Data Analysis and Software Development skills.</p>
         </div>
       </footer>
-      
+
     </div>
   );
 }
