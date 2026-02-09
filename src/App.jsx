@@ -16,6 +16,9 @@ import {
   SquareCode,
   Menu, // Imported Menu icon for mobile toggle
   X, // Imported X icon for closing mobile menu
+  Terminal, // Imported Terminal icon for CLI projects
+  Smartphone, // Imported Smartphone icon for Mobile App projects
+  ListTodo, // Imported ListTodo icon for Task Manager
 } from 'lucide-react';
 
 // --- Configuration and Dummy Data ---
@@ -32,10 +35,10 @@ const portfolioData = {
   },
 
   skills: {
-    languages: ["JavaScript (React)", "Python", "SQL", "Excel (Advanced)"],
-    frameworks: ["React.js", "Tailwind CSS", "TypeScript "],
+    languages: ["JavaScript (React)", "Python", "SQL", "Excel (Advanced)", "Dart", "Node.js"],
+    frameworks: ["React.js", "Tailwind CSS", "TypeScript", "Flutter"],
     databases: ["MySQL"],
-    tools: ["Git", "GitHub", "Jupyter Notebooks"],
+    tools: ["Git", "GitHub", "Jupyter Notebooks", "Postman"],
     concepts: ["Data Structures & Algorithms", "Data Analysis", "Predictive Modeling", "OOP"],
   },
 
@@ -66,6 +69,33 @@ const portfolioData = {
       technologies: ["React.js", "MySQL", "Tailwind CSS"],
       link: "CLASSIFIED/PRIVATE REPO",
       status: "In Progress",
+    },
+    {
+      id: 4,
+      title: "CLI File Management System",
+      icon: Terminal,
+      description: "A comprehensive command-line tool for file system operations. Features include creating files/folders, deleting, writing to files, moving, renaming, changing directories, and system-wide file search.",
+      technologies: ["Python", "OS Module", "Shutil"],
+      // link: "https://github.com/tobiSticks",
+      status: "Completed",
+    },
+    {
+      id: 5,
+      title: "CLI Task Manager",
+      icon: ListTodo,
+      description: "A robust command-line interface application for managing tasks, allowing users to create, view, update, and delete tasks efficiently.",
+      technologies: ["Python", "JSON/CSV (Storage)"],
+      link: "https://github.com/tobiSticks/CLI-Task-Manager.git",
+      status: "Completed",
+    },
+    {
+      id: 6,
+      title: "Chat App Onboarding (Flutter)",
+      icon: Smartphone,
+      description: "Designed and implemented a smooth, 4-page onboarding flow for a mobile chat application currently in production. Focused on user experience and clean UI transitions.",
+      technologies: ["Flutter", "Dart"],
+      // link: "https://github.com/tobiSticks",
+      status: "In Production",
     },
   ],
 
@@ -132,7 +162,7 @@ const ProjectCard = ({ project }) => {
         </div>
       </div>
 
-      {project.link !== "CLASSIFIED/PRIVATE REPO" && (
+      {project.link && project.link !== "CLASSIFIED/PRIVATE REPO" && (
         <a
           href={project.link}
           target="_blank"
