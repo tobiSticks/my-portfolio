@@ -26,7 +26,9 @@ import {
 const portfolioData = {
   name: "Adeniji Oluwatobi Adebayo",
   title: "Aspiring AI Expert | Data Analysis & Software Developer",
-  bio: "A recent Computer Science graduate from Landmark University (Class of 2025) with a dual specialization in Data Analysis and Software Development. Driven by a passion for leveraging machine learning and AI to build predictive systems and solve complex, real-world problems. Proficient in React and experienced in full-stack development and data management.",
+  bio: <p className="text-justify">
+    Front-End Developer with over 2 years of experience building production-ready applications. Proficient in JavaScript, React.js, Next.js, and TypeScript. Skilled at delivering high-performance web and mobile experiences, as well as scalable UI components, with a strong focus on performance,accessibility, and maintainable code. <br/> Beyond personal projects that strengthened my fundamentals, I have collaborated with companies, colleagues, and individuals to build real-world applications that create meaningful impact. Currently xpanding into backend development with Node.js and Supabase. Also an AI Engineer (vibecoder), passionate about leveraging emerging technologies to solve practical problems. Committed to combining technical expertise, creativity, and a growth mindset to drive impactful solutions one product at a time
+  </p>,
 
   contact: {
     email: "padenijiinfinity@gmail.com",
@@ -161,7 +163,7 @@ const ProjectCard = ({ project }) => {
         <Icon className="w-8 h-8 text-indigo-600 shrink-0" />
       </div>
       <p className="text-sm text-indigo-600 font-medium mb-4">{project.status}</p>
-      <p className="text-gray-600 text-sm mb-4 min-h-[72px]">{project.description}</p>
+      {/* <p className="text-gray-600 text-sm mb-4 min-h-[72px] text-left">{project.description}</p> */}
 
       <div className="mt-4">
         <p className="text-sm font-medium text-gray-700 mb-2">Tech Stack:</p>
