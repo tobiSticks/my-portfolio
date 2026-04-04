@@ -19,6 +19,7 @@ import {
   Terminal, // Imported Terminal icon for CLI projects
   Smartphone, // Imported Smartphone icon for Mobile App projects
   ListTodo, // Imported ListTodo icon for Task Manager
+  TrendingUp, // Imported TrendingUp icon for ForexEdge Marketplace
 } from 'lucide-react';
 
 // --- Configuration and Dummy Data ---
@@ -36,13 +37,22 @@ const portfolioData = {
 
   skills: {
     languages: ["JavaScript (React)", "Python", "SQL", "Excel (Advanced)", "Dart", "Node.js"],
-    frameworks: ["React.js", "Tailwind CSS", "TypeScript", "Flutter"],
-    databases: ["MySQL"],
+    frameworks: ["React.js", "Next.js 14", "Tailwind CSS", "TypeScript", "Flutter"],
+    databases: ["MySQL", "Supabase (PostgreSQL)"],
     tools: ["Git", "GitHub", "Jupyter Notebooks", "Postman"],
     concepts: ["Data Structures & Algorithms", "Data Analysis", "Predictive Modeling", "OOP"],
   },
 
   projects: [
+    {
+      id: 0,
+      title: "ForexEdge Marketplace",
+      icon: TrendingUp,
+      description: "A secure trading strategy marketplace with verified performance data. Features automated split payments via Paystack and protected logic using Supabase Row-Level Security (RLS). Prevents scams by calculating PNL/Win-Rate directly from logged data.",
+      technologies: ["Next.js 14", "Supabase", "PostgreSQL", "Paystack"],
+      link: "CLASSIFIED/PRIVATE REPO",
+      status: "Production Ready",
+    },
     {
       id: 1,
       title: "Skin Cancer Predictive Model (Multimodal)",
