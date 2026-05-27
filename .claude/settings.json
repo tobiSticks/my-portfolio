@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\paden\\\\Documents\\\\personal_directory\\\\cv\\\\my-portfolio\" -Recurse -Depth 3 -Exclude \"node_modules\", \".git\" -Directory)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Head -50)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\paden\\\\Documents\\\\personal_directory\\\\cv\\\\my-portfolio\" | Where-Object { $_.PSIsContainer -eq $false -and $_.Name -notmatch \"node_modules|.git\" } | Select-Object Name)",
+      "Read(//c/Users/paden/Documents/personal_directory/cv/my-portfolio/public/assets/**)"
+    ]
+  }
+}
