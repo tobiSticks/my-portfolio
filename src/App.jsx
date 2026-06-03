@@ -141,6 +141,14 @@ const portfolioData = {
   experience: [
     {
       type: "Work",
+      role: "NYSC Corp Member — Procurement Unit",
+      organization: "Nigerian Electricity Regulatory Commission (NERC)",
+      date: "June 2026 – Present · Abuja",
+      description: "Serving as a Youth Corp Member at Nigeria's electricity sector regulator under the National Youth Service Corps programme. Attached to the Procurement Unit, handling procurement documentation, file management, correspondence signings, and administrative coordination in line with regulatory procurement processes.",
+      icon: Briefcase,
+    },
+    {
+      type: "Work",
       role: "Front-End Developer",
       organization: "Nexapay",
       date: "Nov 2025 – Present · Remote",
