@@ -30,7 +30,7 @@ import {
 // --- Configuration ---
 const portfolioData = {
   name: "Oluwatobi Adeniji",
-  title: "Front-End Developer · AI Engineer · Full-Stack Builder",
+  title: "Front-End Developer · AI Engineer · Software Developer",
   bio: "Results-driven Front-End Developer with 2+ years of experience building production-ready web applications. Proficient in JavaScript, TypeScript, React.js, and Next.js, with a strong track record of delivering high-performance, accessible, and scalable UI systems. Currently expanding into full-stack development with Node.js and Supabase, while actively shipping AI-powered SaaS products as an indie developer. Passionate about combining technical depth, creative problem-solving, and emerging AI tooling to build impactful products one release at a time.",
 
   contact: {
@@ -470,7 +470,7 @@ export default function App() {
       <footer className="bg-gray-900 text-gray-400 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-sm">
           <p className="font-medium text-white mb-1">Oluwatobi Adeniji</p>
-          <p>Front-End Developer · AI Engineer · Full-Stack Builder</p>
+          <p>Front-End Developer · AI Engineer · Software Developer</p>
           <p className="mt-3 text-gray-600 text-xs">&copy; {new Date().getFullYear()} · Built with React & Tailwind CSS</p>
         </div>
       </footer>
