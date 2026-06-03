@@ -24,6 +24,7 @@ import {
   ExternalLink,
   Zap,
   Cpu,
+  Youtube,
 } from 'lucide-react';
 
 // --- Configuration ---
@@ -67,7 +68,20 @@ const portfolioData = {
       icon: Cpu,
       description: "Full-stack robotics learning platform with structured tracks across Software (Python, ROS 2, simulation), Mechanical (CAD, joints, mechanisms), and Electrical (circuits, microcontrollers, sensors) engineering. Features an AI tutor powered by Claude that answers questions in the exact context of the active lesson, quiz generation with progress tracking, a community hub, and a leaderboard — all with MDX-rendered lesson content.",
       technologies: ["Next.js 15", "TypeScript", "Claude API", "Supabase", "MDX", "Tailwind CSS"],
-      status: "In Development",
+      link: "https://robo-learn-six.vercel.app/",
+      linkLabel: "Live Demo",
+      status: "Live · Production",
+      featured: false,
+    },
+    {
+      id: 8,
+      title: "CaptionGrab — YouTube Caption Extractor",
+      icon: Youtube,
+      description: "Free tool that extracts subtitles from any YouTube video and downloads them as .SRT, .VTT, or .TXT files — no sign-up required. Supports 23 languages, works with standard YouTube URLs and Shorts, and is compatible with professional editing tools like Adobe Premiere, DaVinci Resolve, and Final Cut Pro.",
+      technologies: ["Next.js 15", "TypeScript", "YouTube API", "Tailwind CSS"],
+      link: "https://caption-grab.vercel.app/",
+      linkLabel: "Live Demo",
+      status: "Live · Free",
       featured: false,
     },
     {
