@@ -23,6 +23,7 @@ import {
   Sparkles,
   ExternalLink,
   Zap,
+  Cpu,
 } from 'lucide-react';
 
 // --- Configuration ---
