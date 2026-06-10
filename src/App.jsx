@@ -25,6 +25,7 @@ import {
   Zap,
   Cpu,
   Youtube,
+  Cast,
 } from 'lucide-react';
 
 // --- Configuration ---
@@ -60,6 +61,15 @@ const portfolioData = {
       link: "https://one-post-rho.vercel.app",
       linkLabel: "Live Demo",
       status: "Live · Production",
+      featured: true,
+    },
+    {
+      id: 9,
+      title: "oneSound — Phone-as-Speaker Audio Streaming",
+      icon: Cast,
+      description: "Windows desktop app that captures live system audio and streams it to any phone's browser over WiFi — turning a phone into a wireless PC speaker with no app install, cloud, or cables. Built a custom AudioWorklet jitter buffer for low-latency playback, runtime self-signed TLS for secure WebSocket streaming, and mDNS + QR-code discovery for instant zero-config pairing. Packaged as a standalone Windows executable with PyInstaller.",
+      technologies: ["Python (asyncio)", "aiohttp + WebSockets", "WASAPI Loopback", "Web Audio API", "Zeroconf / mDNS", "PyInstaller"],
+      status: "Shipped · Windows Desktop",
       featured: true,
     },
     {
