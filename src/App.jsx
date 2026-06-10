@@ -27,6 +27,7 @@ import {
   Youtube,
   Cast,
 } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 // --- Configuration ---
 const portfolioData = {
@@ -493,6 +494,7 @@ export default function App() {
         </div>
       </footer>
 
+      <Analytics />
     </div>
   );
 }
